@@ -1,100 +1,52 @@
 # Library Management System
 
-A Django-based Library Management System with an admin panel for managing books and users.
+This is an Admin Panel for a Library Management System built using Django. It provides CRUD operations for managing library data.
 
-## Table of Contents
-- [About](#about)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Project Structure](#project-structure)
-- [Environment Variables](#environment-variables)
-- [Running the Project](#running-the-project)
-- [Admin Panel](#admin-panel)
-- [License](#license)
+## Technologies Used
+- **Django**: 4.2.20
+- **MySQL**: Database for storing library data
 
-## About
-
-This project provides an admin panel to manage books and members in a library. It is built using Django and includes features such as book management and user authentication.
+## Features
+- Admin panel for managing books, authors, and users
+- CRUD operations for library records
 
 ## Installation
-
-### Prerequisites
-- Python (3.x recommended)
-- Django 4.2.20
-- mysqlclient 2.2.7
-- djangorestframework 3.15.2
-- Virtual Environment (optional but recommended)
-
-### Setup
-```sh
-# Clone the repository
-git clone https://github.com/yourusername/library-management.git
-cd library-management
-
-# Create a virtual environment
-python -m venv venv
-
-# Activate the virtual environment
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/aniketdoke35/LibrayManagementSystem.git
+   ```
+2. Navigate to the project directory:
+   ```sh
+   cd LibrayManagementSystem
+   ```
+3. Create and activate a virtual environment:
+   ```sh
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   ```
+4. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+5. Configure MySQL database in `settings.py`.
+6. Apply migrations:
+   ```sh
+   python manage.py migrate
+   ```
+7. Create a superuser:
+   ```sh
+   python manage.py createsuperuser
+   ```
+8. Run the server:
+   ```sh
+   python manage.py runserver
+   ```
 
 ## Usage
-
-The admin panel allows librarians to manage books and users efficiently.
-
-## Project Structure
-```
-/library_management
-│-- manage.py
-│-- library_app/
-│   │-- models.py
-│   │-- views.py
-│   │-- urls.py
-│   │-- admin.py
-│   │-- templates/
-│-- requirements.txt
-│-- README.md
-│-- .env
-```
-
-## Environment Variables
-Create a `.env` file in the project root and add the required variables:
-```sh
-SECRET_KEY=your_secret_key
-DEBUG=True
-DATABASE_URL=sqlite:///db.sqlite3
-```
-
-## Running the Project
-```sh
-# Apply migrations
-python manage.py migrate
-
-# Create a superuser
-python manage.py createsuperuser
-
-# Start the development server
-python manage.py runserver
-```
-
-## Admin Panel
-
-Access the admin panel at:
-```
-http://127.0.0.1:8000
-```
-Use the superuser credentials created earlier to log in and manage books and users.
+- Access the admin panel at `http://127.0.0.1:8000/admin/`.
+- Log in using the superuser credentials.
+- Manage books, authors, and users through the admin interface.
 
 ## License
+This project is open-source and available under the MIT License.
 
-Specify the license (e.g., MIT, Apache) under which your project is distributed.
-
----
-
-This project is designed to simplify library management through a Django-powered admin panel. 🚀

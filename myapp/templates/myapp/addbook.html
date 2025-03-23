@@ -1,0 +1,38 @@
+{% extends 'myapp/nav.html' %}
+
+
+{% block body %}
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Add New Book</h2>
+        <div class="card p-4">
+            <form action="#" method="post"> {% csrf_token %}
+                <div class="mb-3">
+                    <label class="form-label">Book id</label>
+                    <input type="number" class="form-control" name="bid" placeholder="Enter book id">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Book Name</label>
+                    <input type="text" class="form-control" name="bookName" placeholder="Enter book name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input type="text" class="form-control" name="author" placeholder="Enter author name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                    <input type="text" class="form-control" name="category" placeholder="Enter book category">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Published Year</label>
+                    <input type="date" name="publishedYear" required>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Add Book</button>
+                <a href="/main/" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+
+
+
+    {%endblock body%}

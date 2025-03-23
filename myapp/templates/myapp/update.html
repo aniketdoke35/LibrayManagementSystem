@@ -1,0 +1,38 @@
+{% extends 'myapp/nav.html' %}
+
+
+{% block body %}
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Update Book</h2>
+        <div class="card p-4">
+            <form class="p-3" action="/update/{{ b.bid }}/" method="POST"> {% csrf_token %} 
+                <div class="mb-3">
+                    <label class="form-label">Book id</label>
+                    <input type="number" class="form-control" name="bid" value="{{b.bid}}"  placeholder="Enter book id">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Book Name</label>
+                    <input type="text" class="form-control" name="bookName" value="{{b.bookName}}" placeholder="Enter book name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Author</label>
+                    <input type="text" class="form-control" name="author" value="{{b.author}}" placeholder="Enter author name">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Category</label>
+                    <input type="text" class="form-control" name="category" value="{{b.category}}" placeholder="Enter book category">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Published Year</label>
+                    <input type="date" name="publishedYear" value="{{b.publishedYear}}" required>
+                </div>
+                
+                <button type="submit" class="btn btn-success">Update</button>
+                <a href="/main/" class="btn btn-secondary">Cancel</a>
+            </form>
+        </div>
+    </div>
+
+
+
+    {%endblock body%}

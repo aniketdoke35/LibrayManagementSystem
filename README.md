@@ -43,10 +43,7 @@ This is an Admin Panel for a Library Management System built using Django. It pr
    ```
 
 ## Usage
-- Access the admin panel at `http://127.0.0.1:8000/admin/`.
+- Access the admin panel at `http://127.0.0.1:8000`.
 - Log in using the superuser credentials.
 - Manage books, authors, and users through the admin interface.
-
-## License
-This project is open-source and available under the MIT License.
 
